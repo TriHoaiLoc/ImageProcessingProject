@@ -4,7 +4,7 @@ import numpy as np
 L = 256
 #-----Function Chapter 5-----#
 def CreateMotionfilter(M, N):
-    H = np.zeros((M,N), np.complex)
+    H = np.zeros((M,N), np.complex64)
     a = 0.1
     b = 0.1
     T = 1
@@ -46,7 +46,7 @@ def CreateMotionNoise(imgin):
     return g
 
 def CreateInverseMotionfilter(M, N):
-    H = np.zeros((M,N), np.complex)
+    H = np.zeros((M,N), np.complex64)
     a = 0.1
     b = 0.1
     T = 1
