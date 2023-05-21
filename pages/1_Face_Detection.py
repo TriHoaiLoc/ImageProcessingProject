@@ -54,7 +54,6 @@ class face_detect():
 if __name__=='__main__':
     st.header("Phát hiện khuôn mặt")
     st.markdown("<hr>", unsafe_allow_html=True)
-    st.sidebar.markdown("---")
 
     face = face_detect()
     face.main_img()
