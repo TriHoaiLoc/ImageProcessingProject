@@ -16,7 +16,7 @@ def openColor(fileimg):
     return img
 
 def DenoisesMotion(imgin):
-    img = cv.medianBlur(imgin, 8)
+    img = cv.medianBlur(imgin, 7)
     return ch5.DenoiseMotion(img)
 
 def default_process():
