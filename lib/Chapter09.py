@@ -106,7 +106,7 @@ def CountRice(imgin):
             max = a[r]
             rmax = r
 
-    xoa = np.array([], np.int)
+    xoa = np.array([], np.int8)
     for r in range(1, dem):
         if a[r] < 0.5*max:
             xoa = np.append(xoa, r)
