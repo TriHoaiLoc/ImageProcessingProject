@@ -23,7 +23,7 @@ def CreateMotionfilter(M, N):
 
 def CreateMotionNoise(imgin):
     M, N = imgin.shape
-    f = imgin.astype(np.float)
+    f = imgin.astype(np.float32)
     # Buoc 1: DFT
     F = np.fft.fft2(f)
     # Buoc 2: Shift vao the center of the image
@@ -69,7 +69,7 @@ def CreateInverseMotionfilter(M, N):
 
 def DenoiseMotion(imgin):
     M, N = imgin.shape
-    f = imgin.astype(np.float)
+    f = imgin.astype(np.float32)
     # Buoc 1: DFT
     F = np.fft.fft2(f)
     # Buoc 2: Shift vao the center of the image
