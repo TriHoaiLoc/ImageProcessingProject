@@ -19,6 +19,10 @@ def main():
         2. Nhận dạng khuôn mặt
         3. Xử lý ảnh
         
+        ### Link
+        - Github: **https://github.com/TriHoaiLoc/ImageProcessingProject**
+        - Deploy: **https://trihoailoc-imageprocessingproject-home-e1mf0s.streamlit.app/**
+        <br><br>
         <div style="text-align: right;">Thành phố Hồ Chí Minh, tháng 5 năm 2023</div>
         """, unsafe_allow_html=True
     )
