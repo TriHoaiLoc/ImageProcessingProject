@@ -62,7 +62,7 @@ def ConnectedComponent(imgin):
     text = 'Co %d thanh phan lien thong' % (dem-1) 
     print(text)
 
-    a = np.zeros(dem, np.int)
+    a = np.zeros(dem, np.int8)
     M, N = label.shape
     color = 150
     for x in range(0, M):
@@ -75,7 +75,7 @@ def ConnectedComponent(imgin):
     for r in range(1, dem):
         print('%4d %10d' % (r, a[r]))
     label = label.astype(np.uint8)
-    cv2.putText(label,text,(1,25),cv2.FONT_HERSHEY_SIMPLEX,1.0, (255,255,255),2)
+    label = cv2.putText(label,text,(1,25),cv2.FONT_HERSHEY_SIMPLEX,1.0, (255,255,255),2)
     return label
 
 def CountRice(imgin):
@@ -86,7 +86,7 @@ def CountRice(imgin):
     dem, label = cv2.connectedComponents(temp)
     text = 'Co %d hat gao' % (dem-1) 
     print(text)
-    a = np.zeros(dem, np.int)
+    a = np.zeros(dem, np.int8)
     M, N = label.shape
     color = 150
     for x in range(0, M):
