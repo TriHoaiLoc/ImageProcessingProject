@@ -22,7 +22,7 @@ def DenoisesMotion(imgin):
 def default_process():
     return cv.imread('img/no-img.jpg')
 
-def ImgProcessing(option, imgin=None):
+def ImgProcessing(option, imgin=['temp']):
     options = {
         #chapter 3
         '1. Negative': ch3.Negative,
@@ -54,7 +54,7 @@ def ImgProcessing(option, imgin=None):
         '2. Count Rice': ch9.CountRice,
 
     }
-    if imgin:
+    if imgin != ['temp']:
         imgout = options.get(option, default_process)(imgin)
     else:
         imgout = options.get(option, default_process)()
