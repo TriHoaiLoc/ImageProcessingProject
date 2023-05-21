@@ -22,7 +22,7 @@ def DenoisesMotion(imgin):
 def default_process():
     return cv.imread('img/no-img.jpg')
 
-def ImgProcessing(option, imgin):
+def ImgProcessing(option, imgin=None):
     options = {
         #chapter 3
         '1. Negative': ch3.Negative,
@@ -54,8 +54,10 @@ def ImgProcessing(option, imgin):
         '2. Count Rice': ch9.CountRice,
 
     }
-
-    imgout = options.get(option, default_process)(imgin)
+    if imgin:
+        imgout = options.get(option, default_process)(imgin)
+    else:
+        imgout = options.get(option, default_process)()
     return imgout
 
 if __name__=="__main__":
@@ -87,6 +89,11 @@ if __name__=="__main__":
     st.markdown("<hr>", unsafe_allow_html=True)
     fileimg = st.file_uploader("Chọn 1 hình ảnh...", type=["jpg", "jpeg", "png","tif"])
     st.markdown("<hr>", unsafe_allow_html=True)
+
+    if option2 == nameChapter4[2]:
+        imgout = ImgProcessing(option2)
+        FRAME_WINDOW_OUTPUT = st.image([])
+        FRAME_WINDOW_OUTPUT.image(imgout)
 
     if fileimg:
         if option2 == nameChapter3[6]:
