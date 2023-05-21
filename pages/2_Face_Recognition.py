@@ -67,8 +67,6 @@ if __name__=='__main__':
     st.header("Nhận dạng khuôn mặt")
     st.markdown("<hr>", unsafe_allow_html=True)
     st.sidebar.markdown("---")
-
-    option = st.sidebar.radio('Nhận dạng khuôn mặt: ',['Bằng hình ảnh','Bằng camera'])
     
     face = face_recogn()
     face.main_img()
